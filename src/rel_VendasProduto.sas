@@ -1,0 +1,22 @@
+/*
+*
+* Programa: rel_VendasProduto.sas
+* Autor: Alexandra
+* Data: 25/06/2025
+* Módulo: Relatórios
+* Versão: 1.00
+* 
+*/
+
+%include "/opt/sas/Workshop/Git/OC1/macro/macrovars.sas";
+%include "&caminho/src/libraries.sas";
+
+data work.vendasProduto; set sicoob.vendasProduto;
+TotalVenda  = QtdeVendida*PrecoUnitario;
+run;
+
+proc print data=work.vendasproduto;
+	var CodProduto Descricao DataVenda QtdeVendida PrecoUnitario;
+run;
+
+%include "&caminho/scr/clear_libs.sas";

@@ -19,3 +19,4 @@ run;
 proc print data=sicoobsp.carros123;
 	where origin='Europe';
 run;
+

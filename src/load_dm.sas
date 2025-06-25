@@ -9,6 +9,7 @@
 */
 
 %include "/opt/sas/Workshop/Git/OC1/macro/macrovars.sas";
+%include "&caminho/src/libraries.sas";
 
 proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
 	out=Sicoob.vendas replace;
@@ -49,3 +50,5 @@ proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx
 	out=Sicoob.regioes replace;
 	sheet="regiões";
 run;
+
+%include "&caminho/scr/clear_libs.sas";
