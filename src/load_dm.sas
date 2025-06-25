@@ -10,4 +10,12 @@
 
 %include "/opt/sas/Workshop/Git/OC1/macro/macrovars";
 
-proc import datafile="&caminho/output/DM1.xlsx"
+proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
+	out=Sicoob.vendas replace;
+	sheet=vendas;
+run;
+
+proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
+	out=Sicoob.produtos replace;
+	sheet=produtos;
+run;
