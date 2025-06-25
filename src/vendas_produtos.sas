@@ -15,7 +15,13 @@ proc sort data=sicoob.vendas out=work.vendas_produto;
 	by CodProduto;
 run;
 
-proc sort data=sicoob.produtos out=work.produtos_produto;
+/*descobrimos diversos missings - eliminar*/
+data work.produtos_corr ;
+	set sicoob.grupos replace;
+	where CodProduto is not missing;
+run;
+
+proc sort data=sicoob.produtos_corr out=work.produtos_produto;
 	by CodProduto;
 run;
 
