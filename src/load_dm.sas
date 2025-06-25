@@ -8,7 +8,7 @@
 * 
 */
 
-%include "/opt/sas/Workshop/Git/OC1/macro/macrovars";
+%include "/opt/sas/Workshop/Git/OC1/macro/macrovars.sas";
 
 proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
 	out=Sicoob.vendas replace;

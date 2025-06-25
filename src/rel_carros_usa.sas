@@ -10,7 +10,8 @@
 
 %include "/opt/sas/Workshop/Git/OC1/macro/macrovars.sas";
 
-%include "&caminhp/src/libraries.sas";
+%include "&caminho/src/libraries.sas";
+
 proc print data=sicoob.carros;
 	where origin='USA';
 run;
