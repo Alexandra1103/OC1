@@ -19,3 +19,33 @@ proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx
 	out=Sicoob.produtos replace;
 	sheet=produtos;
 run;
+
+proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
+	out=Sicoob.deptos replace;
+	sheet=deptos;
+run;
+
+proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
+	out=Sicoob.grupos replace;
+	sheet=grupos;
+run;
+
+proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
+	out=Sicoob.cores replace;
+	sheet=cores;
+run;
+
+proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
+	out=Sicoob.tamanhos replace;
+	sheet=tamanhos;
+run;
+
+proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
+	out=Sicoob.estados replace;
+	sheet=estados;
+run;
+
+proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
+	out=Sicoob.regioes replace;
+	sheet="regiões";
+run;
