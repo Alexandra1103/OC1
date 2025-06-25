@@ -8,5 +8,5 @@
 * 
 */
 
-libname sicoob clear;
-libname sicoobSP clear;
+libname Sicoob clear;
+libname SicoobSP clear;

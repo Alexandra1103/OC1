@@ -19,4 +19,4 @@ proc print data=work.vendasproduto;
 	var CodProduto Descricao DataVenda QtdeVendida PrecoUnitario;
 run;
 
-%include "&caminho/scr/clear_libs.sas";
+%include "&caminho/src/clear_libs.sas";

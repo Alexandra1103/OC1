@@ -51,4 +51,4 @@ proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx
 	sheet="regiões";
 run;
 
-%include "&caminho/scr/clear_libs.sas";
+%include "&caminho/src/clear_libs.sas";
