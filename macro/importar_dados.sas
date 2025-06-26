@@ -11,6 +11,6 @@
 %macro importar_dados (tabela,planilha);
 proc import datafile="&caminho/output/DM1.xlsx" dbms=xlsx 
 	out=Sicoob.&tabela replace;
-	sheet=&planilha;
+	sheet="&planilha";
 run;
 %mend importar_dados;

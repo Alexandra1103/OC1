@@ -36,5 +36,11 @@ create table sicoobsp.VendasPeriodo as
 	inner join sicoob.tamanho as f 
 	on f.codtamanho=a.codtamanho 
 	inner join sicoob.tamanho as g 
-	on g.codtamanho=a.codtamanho ;
+	on g.codtamanho=a.codtamanho
+	inner join sicoob.estado as h 
+	on h.codestado=a.codestado
+	inner join sicoob.regioes as h 
+	on h.codregiao=a.codregiao;
 	quit;
+
+%include "&caminho/src/clear_libs.sas";
