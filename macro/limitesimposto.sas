@@ -7,6 +7,7 @@
 * Versão: 1.00
 * 
 */
+%global est_min_pi est_max_pi;
  
 %macro EstadoComMaiorImposto;
 	proc sql noprint;

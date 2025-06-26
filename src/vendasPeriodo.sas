@@ -10,7 +10,7 @@
 
  
 %include "&caminho/src/load_dm.sas";
-%include "&caminho/src/tran_VendasPeriodo.sas";
+%include "&caminho/src/trans_VendasPeriodo.sas";
 
 
 
