@@ -1,4 +1,4 @@
-*
+/*
 * Programa: rel_VendasPorEstado.sas
 * Autor: Alexandra
 * Data: 26/06/2025
