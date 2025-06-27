@@ -43,4 +43,4 @@ create table sicoobsp.VendasPeriodo as
 	on h.CodRegiao=g.codregiao;
 	quit;
 
-/*%include "&caminho/src/clear_libs.sas";/
+/*%include "&caminho/src/clear_libs.sas";*/

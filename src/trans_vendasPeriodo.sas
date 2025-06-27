@@ -42,6 +42,7 @@ create table sicoobSP.VendasPeriodo as
 	on g.codestado=a.codestado
 	inner join sicoob.regioes as h 
 	on h.CodRegiao=g.codregiao;
+	where year(datavenda) = 2022; 
 	quit;
 
-/*%include "&caminho/src/clear_libs.sas";*/
+%include "&caminho/src/clear_libs.sas";
