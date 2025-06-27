@@ -13,7 +13,8 @@
 
 
 proc sql;
-create table sicoobsp.VendasPeriodo as 
+/*drop table oc1.VendasPeriodo;*/
+create table sicoobSP.VendasPeriodo as 
 	select a.codproduto, b.descricao,
 	c.descricao as grupo,b.codgrupo, 
 	d.descricao as depto, e.descricao as cor,
@@ -26,7 +27,7 @@ create table sicoobsp.VendasPeriodo as
 	b.precounitario*a.qtdevendida*g.percimposto as totalimposto,
 	b.precounitario, 
 	b.precounitario*a.qtdevendida as totalvenda
-	from sicoob.vendas as a
+	from oc1.vendas as a
 	inner join sicoob.produtos as b
 	on a.codproduto = b.codproduto
 	inner join sicoob.grupos as c
@@ -43,4 +44,4 @@ create table sicoobsp.VendasPeriodo as
 	on h.CodRegiao=g.codregiao;
 	quit;
 
-%include "&caminho/src/clear_libs.sas";
+/*%include "&caminho/src/clear_libs.sas";*/
