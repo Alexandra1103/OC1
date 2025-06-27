@@ -1,8 +1,8 @@
 /*
 *
-* Programa: trans_vendas_periodo
+* Programa: trans_vendasperiodoformat
 * Autor: Alexandra
-* Data: 25/06/2025
+* Data: 27/06/2025
 * Módulo: Preparação de Dados
 * Versão: 1.00
 * 
