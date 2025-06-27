@@ -10,15 +10,15 @@
 
 %include "/opt/sas/Workshop/Git/OC1/macro/macrovars.sas";
 %include "&caminho/src/libraries.sas";
-%include "&caminho/src/formatos_corp.sas";
+
 
 proc sql;
 create table sicoobsp.VendasPeriodo as 
 	select a.codproduto, b.descricao,
 	c.descricao as grupo,b.codgrupo, 
 	d.descricao as depto, e.descricao as cor,
-	a.codtamanho format=tamanho.,
-	/*f.descricao as tamanho,*/
+	a.codtamanho,
+	f.descricao as tamanho,
 	b.coddepto, a.codcor, a.codtamanho, a.codestado,
 	a.datavenda, a.qtdevendida, g.sigla, 
 	g.nome as estado, h.nome as regiao, 
@@ -35,12 +35,12 @@ create table sicoobsp.VendasPeriodo as
 	on d.coddepto= b.coddepto
 	inner join sicoob.cores as e
 	on e.codcor=a.codcor
-/*	inner join sicoob.tamanhos as f 
-	on f.codtamanho=a.codtamanho */
+	inner join sicoob.tamanhos as f 
+	on f.codtamanho=a.codtamanho 
 	inner join sicoob.estados as g 
 	on g.codestado=a.codestado
 	inner join sicoob.regioes as h 
 	on h.CodRegiao=g.codregiao;
 	quit;
 
-/*%include "&caminho/src/clear_libs.sas";/
+%include "&caminho/src/clear_libs.sas";
